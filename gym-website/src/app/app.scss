@@ -83,3 +83,10 @@ hr {
   border: none;
   border-top: 1.5px solid #b3d8fd;
 }
+
+// Ensure pages inside router outlet have minimum height
+.main-content {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
