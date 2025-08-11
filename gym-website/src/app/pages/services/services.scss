@@ -1,0 +1,46 @@
+// Services Page Styles
+h1 {
+  color: #1a365d;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+}
+
+ul li {
+  background: #e6f0fa;
+  color: #234e70;
+  margin: 0.7rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  transition: background 0.2s;
+}
+
+ul li:hover {
+  background: #b3d8fd;
+}
+
+p {
+  text-align: center;
+  color: #2b6cb0;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  ul li {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}
