@@ -18,7 +18,7 @@ Welcome to the Gym Website project! This is a modern, responsive web application
 ## Getting Started
 1. Clone the repository:
 	```
-	git clone <repository-url>
+	git clone https://github.com/TheArchangle/GymWebsite.git
 	```
 2. Navigate to the project directory:
 	```
