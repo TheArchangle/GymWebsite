@@ -1,46 +1,96 @@
 // Services Page Styles
-h1 {
-  color: #1a365d;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2.2rem;
+.services-container {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  padding-bottom: 2rem;
 }
 
-ul {
+.services-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem 1rem;
+  background: linear-gradient(90deg, #2b6cb0 60%, #f8fafc 100%);
+  color: #fff;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(43, 108, 176, 0.08);
+}
+.services-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 1px;
+}
+.services-hero .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e7ef;
+}
+
+.services-list-section {
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+}
+.services-list {
   list-style: none;
   padding: 0;
-  max-width: 400px;
-  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
-
-ul li {
-  background: #e6f0fa;
+.services-list li {
+  background: #fff;
   color: #234e70;
-  margin: 0.7rem 0;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  padding: 1.5rem 1rem;
+  width: 260px;
+  text-align: center;
   transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services-list li:hover {
+  background: #e6f0fa;
+}
+.services-list i {
+  font-size: 2.2rem;
+  color: #2b6cb0;
+  margin-bottom: 0.7rem;
+}
+.services-list span {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #1a365d;
+}
+.services-list p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-ul li:hover {
-  background: #b3d8fd;
-}
-
-p {
+.services-note {
   text-align: center;
   color: #2b6cb0;
   font-size: 1.1rem;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
+@media (max-width: 900px) {
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+}
 @media (max-width: 600px) {
-  h1 {
+  .services-hero h1 {
     font-size: 1.5rem;
   }
-  ul li {
+  .services-list li {
     font-size: 1rem;
-    padding: 0.7rem 1rem;
+    padding: 1rem;
+    width: 90vw;
   }
 }
