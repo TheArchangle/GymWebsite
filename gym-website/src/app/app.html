@@ -1,22 +1,43 @@
-
 @if (isLoggedIn) {
-  <nav class="navbar">
-    <div class="nav-links">
-      <a routerLink="/home">Home</a>
-      <a routerLink="/services">Services</a>
-      <a routerLink="/contact">Contact</a>
+<nav class="navbar">
+  <div class="nav-links">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/services">Services</a>
+    <a routerLink="/contact">Contact</a>
+  </div>
+  <div class="profile-menu" tabindex="0">
+    <img src="../assets/user.png" alt="" />
+    <div class="profile-dropdown">
+  <a (click)="showProfile()">My Profile</a>
+  <a (click)="showSettings()">Settings</a>
+  <a href="#" (click)="logout()">Logout</a>
     </div>
-    <div class="profile-menu" tabindex="0">
-      <img src="../assets/user.png" alt="">
-      <div class="profile-dropdown">
-        <a href="#">My Profile</a>
-        <a href="#">Settings</a>
-        <a href="#" (click)="logout()">Logout</a>
-      </div>
+  </div>
+</nav>
+<hr />
+@if (profileVisible) {
+  <div class="profile-modal-overlay" (click)="closeProfile()"></div>
+  <div class="profile-modal">
+    <div class="profile-modal-content">
+      <div class="profile-detail">Username: {{ username }}</div>
+      <div class="profile-detail">Email: {{ username }}@example.com</div>
+      <div class="profile-detail">Member Since: Jan 2024</div>
     </div>
-  </nav>
-  <hr />
+    <button class="profile-close-btn" (click)="closeProfile()" aria-label="Close">&times;</button>
+  </div>
 }
+@if (settingsVisible) {
+  <div class="profile-modal-overlay" (click)="closeSettings()"></div>
+  <div class="profile-modal">
+    <div class="profile-modal-content">
+      <div class="profile-detail"><b>Settings</b></div>
+      <div class="profile-detail">Theme: Light</div>
+      <div class="profile-detail">Notifications: Enabled</div>
+    </div>
+    <button class="profile-close-btn" (click)="closeSettings()" aria-label="Close">&times;</button>
+  </div>
+}
+} 
 
 <div class="main-content">
   <router-outlet></router-outlet>
@@ -24,7 +45,16 @@
 
 <footer class="footer">
   <hr />
-  <div style="text-align:center; padding: 1em 0; color: #888; font-size: 0.95em; background: #f8f8f8;">
-    &copy; 2025 My Gym. All rights reserved. | Designed for a wide variety of gym enthusiasts.
+  <div
+    style="
+      text-align: center;
+      padding: 1em 0;
+      color: #888;
+      font-size: 0.95em;
+      background: #f8f8f8;
+    "
+  >
+    &copy; 2025 My Gym. All rights reserved. | Designed for a wide variety of
+    gym enthusiasts.
   </div>
 </footer>

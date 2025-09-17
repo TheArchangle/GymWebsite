@@ -25,6 +25,8 @@ export class LoginComponent {
       this.loginError = false;
       // Store login state (simple example)
       localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('username', this.username);
+      console.log('Username stored:', this.username);
       this.router.navigate(['/home']); // Redirect to home or dashboard
     } else {
       this.loginError = true;
