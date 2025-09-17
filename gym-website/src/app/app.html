@@ -1,20 +1,22 @@
-<nav class="navbar">
-  <div class="nav-links">
-    <a routerLink="/">Home</a>
-    <a routerLink="/services">Services</a>
-    <a routerLink="/contact">Contact</a>
-  </div>
-  <div class="profile-menu" tabindex="0">
-    <img src="../assets/user.png" alt="">
-    <!-- <span class="profile-icon">&#128100;</span> -->
-    <div class="profile-dropdown">
-      <a href="#">My Profile</a>
-      <a href="#">Settings</a>
-      <a href="#">Logout</a>
+
+@if (isLoggedIn) {
+  <nav class="navbar">
+    <div class="nav-links">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/services">Services</a>
+      <a routerLink="/contact">Contact</a>
     </div>
-  </div>
-</nav>
-<hr />
+    <div class="profile-menu" tabindex="0">
+      <img src="../assets/user.png" alt="">
+      <div class="profile-dropdown">
+        <a href="#">My Profile</a>
+        <a href="#">Settings</a>
+        <a href="#" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <hr />
+}
 
 <div class="main-content">
   <router-outlet></router-outlet>

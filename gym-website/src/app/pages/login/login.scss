@@ -1,0 +1,76 @@
+// Login Page Styles
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+}
+.login-form {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(43, 108, 176, 0.10);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.login-form h2 {
+  color: #2b6cb0;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+label {
+  color: #234e70;
+  font-weight: 500;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 0.7rem;
+  border: 1px solid #b3d8fd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1.5px solid #2b6cb0;
+  outline: none;
+}
+.error-message {
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #e53e3e;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.98rem;
+}
+button[type="submit"] {
+  background: #2b6cb0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover {
+  background: #234e70;
+}
+@media (max-width: 600px) {
+  .login-form {
+    width: 95vw;
+    padding: 1.5rem 0.5rem;
+  }
+}
